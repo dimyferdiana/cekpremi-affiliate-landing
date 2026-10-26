@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="500" viewBox="0 0 620 500" fill="none">
+  <defs><clipPath id="scene"><rect x="40" y="35" width="540" height="430" rx="180"/></clipPath><pattern id="grain" patternUnits="userSpaceOnUse" width="18" height="18"><circle cx="2" cy="3" r=".6" fill="#fff" opacity=".5"/><circle cx="12" cy="11" r=".5" fill="#45604e" opacity=".12"/></pattern></defs>
+  <ellipse cx="313" cy="456" rx="226" ry="16" fill="#dce2d4"/>
+  <rect x="46" y="37" width="528" height="430" rx="180" fill="#e9ecdf"/>
+  <g clip-path="url(#scene)">
+    <circle cx="388" cy="125" r="83" fill="#f3ce93"/>
+    <path d="M49 334c90-24 178-13 251 17 91 38 186 33 291-7v159H32V334Z" fill="#d8dfca"/>
+    <path d="M45 423c92-28 188-9 272 11 102 23 189 18 278-5v60H45v-66Z" fill="#c9d3b9"/>
+    <rect x="45" y="37" width="528" height="430" rx="180" fill="url(#grain)"/>
+    <!-- Left figure: leaning in to share information. -->
+    <path d="m122 285-15 134 48 4 18-122-51-16Z" fill="#344f43"/>
+    <path d="m167 292 30 114-24 51 33 5 42-58-25-127-56 15Z" fill="#294438"/>
+    <path d="m105 417-9 33c-3 9 3 13 14 13h41l4-39-50-7Z" fill="#f7f3e7"/>
+    <path d="m177 446-13 12c-7 7-2 12 8 12h39l4-10-38-14Z" fill="#f7f3e7"/>
+    <path d="M119 188c-18 23-27 69-23 100 28 23 91 39 139 16l-4-91c-2-23-22-39-43-39l-69 14Z" fill="#d97847"/>
+    <path d="M129 204c-15 17-20 43-15 65 6 17 36 23 58 23l3-20-32-19 16-31-30-18Z" fill="#e6a876"/>
+    <path d="m157 273 31-4 8 7-7 11-25 5-7-19Z" fill="#e6a876"/>
+    <path d="m203 207 28 28 27-29 16 13c-16 34-40 52-55 41l-42-33 26-20Z" fill="#e6a876"/>
+    <path d="m252 209 1-13c1-8 7-14 11-13l4 14 8-3 4 7-9 19-19-11Z" fill="#e6a876"/>
+    <path d="m154 159-1 29c9 12 26 13 37 2l-2-35-34 4Z" fill="#d99a67"/>
+    <path d="M137 123c-2-24 16-44 41-43 27 1 41 22 37 48l-5 25c-5 20-21 30-40 24-21-7-30-29-33-54Z" fill="#e8ad79"/>
+    <path d="M136 129c-14-25-5-56 19-63 31-10 62 9 63 39-18 10-40 7-53-5-4 14-12 22-29 29Z" fill="#293e34"/>
+    <path d="M137 126c-11-5-16 2-12 13 2 8 8 10 15 9l-3-22Z" fill="#e8ad79"/>
+    <path d="m203 131-8 10 8 3" stroke="#ba7e51" stroke-width="2" stroke-linecap="round"/>
+    <path d="M178 150c5 5 10 6 16 3" stroke="#965f3f" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="196" cy="124" r="2" fill="#293e34"/>
+    <path d="M113 201c7-13 17-21 30-24l18 20-13 39-35-35Z" fill="#d97847"/>
+    <!-- Center phone. -->
+    <g transform="rotate(12 280 198)"><rect x="266" y="161" width="31" height="57" rx="5" fill="#244c43"/><rect x="270" y="166" width="23" height="44" rx="2" fill="#f7f4e9"/><path d="m275 185 5 5 9-10" stroke="#68865c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="282" cy="214" r="1.5" fill="#e9ecdf"/></g>
+    <!-- Right figure. -->
+    <path d="m386 293-24 111 11 53 34-1 4-55 29-96-54-12Z" fill="#e1b77c"/>
+    <path d="m429 290 43 110-22 47 31 15 40-57-37-126-55 11Z" fill="#d6a66d"/>
+    <path d="m370 448-6 13c-3 9 3 13 13 13h32v-22l-39-4Z" fill="#f6f1e5"/>
+    <path d="m452 442-8 13c-3 6-1 11 8 14l33 8 5-17-38-18Z" fill="#f6f1e5"/>
+    <path d="M393 177c-29 8-39 29-39 53l-3 67c40 26 89 21 137 3l-18-84c-4-24-23-36-46-41l-31 2Z" fill="#426650"/>
+    <path d="m360 213-33 22-30-15-10 18 37 28c9 6 17 5 24 1l32-23-20-31Z" fill="#b8754d"/>
+    <path d="m305 222-16-10-12-1c-7 0-10 5-4 9l11 7-6 6 16 7 11-18Z" fill="#b8754d"/>
+    <path d="m448 214 20 46-39 14 7 21 48-10c15-4 19-15 16-27l-22-50-30 6Z" fill="#b8754d"/>
+    <path d="m440 276-21-1-15 8c-6 4-5 9 2 9l12-2 17 8 5-22Z" fill="#b8754d"/>
+    <path d="m390 152 2 30c9 15 24 17 38 0l-4-34-36 4Z" fill="#a96440"/>
+    <path d="M369 113c-1-24 16-44 42-42 25 2 40 20 36 44l-3 31c-4 23-23 31-40 24-20-8-33-31-35-57Z" fill="#bd7e54"/>
+    <path d="M369 134c-18-16-21-38-9-58 10-19 31-30 55-21 26-7 45 14 43 37-1 15-8 28-14 35-3-19-15-33-27-37-14 16-32 19-48 18v26Z" fill="#253e34"/>
+    <path d="M443 127c11-6 17 1 13 12-3 8-8 11-15 9l2-21Z" fill="#bd7e54"/>
+    <path d="m380 128 7 9-7 3" stroke="#925535" stroke-width="2" stroke-linecap="round"/>
+    <path d="M389 149c5 4 10 4 15 0" stroke="#78472f" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="383" cy="121" r="2" fill="#253e34"/>
+    <!-- A shared table, grounding the conversation. -->
+    <path d="M229 317h118l-5 12H235l-6-12Z" fill="#b18b57"/><path d="m247 329-8 117m86-117 9 117" stroke="#b18b57" stroke-width="8" stroke-linecap="round"/>
+    <rect x="263" y="297" width="36" height="19" rx="3" fill="#f4f0e4"/><path d="M270 305h23" stroke="#a7b59d" stroke-width="2"/>
+    <!-- Botanical accent. -->
+    <path d="m526 426-9-106m3 43 28-31m-30 19-23-26" stroke="#829773" stroke-width="3" stroke-linecap="round"/>
+    <path d="M518 336c-19-4-28-16-24-29 18 1 27 12 24 29Zm3 34c25 0 37-13 34-28-21-2-34 10-34 28Zm-7-16c-21 1-35-9-34-24 18-5 33 5 34 24Z" fill="#91a580"/>
+    <path d="M503 419h36l-5 40h-24l-7-40Z" fill="#cfaa7b"/>
+  </g>
+  <!-- Lightweight protection cards, rather than monetary reward imagery. -->
+  <g transform="rotate(-8 96 213)"><rect x="25" y="169" width="103" height="77" rx="13" fill="#fcfbf7" stroke="#dce2d5"/><rect x="37" y="183" width="31" height="31" rx="8" fill="#e7eddf"/><path d="m44 197 9-8 9 8v10H44v-10Zm6 10v-6h6v6" stroke="#5f7954" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M76 190h37m-37 8h26M38 229h62" stroke="#aab7a0" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="rotate(7 525 241)"><rect x="494" y="206" width="107" height="77" rx="13" fill="#fcfbf7" stroke="#dce2d5"/><rect x="507" y="219" width="31" height="31" rx="8" fill="#f7ead8"/><path d="m511 235 4-8h15l4 8v9h-23v-9Zm0 0h23m-18 4h1m11 0h1" stroke="#af7d41" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M546 227h42m-42 8h29M508 267h64" stroke="#b6bdad" stroke-width="3" stroke-linecap="round"/></g>
+  <path d="m304 76 3 10 10 3-10 3-3 10-3-10-10-3 10-3 3-10Z" fill="#b4bea1"/>
+  <path d="m563 106 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#cb9963"/>
+  <circle cx="75" cy="122" r="4" fill="#c28c5d"/>
+  <circle cx="555" cy="384" r="3" fill="#9eaf8c"/>
+</svg>
