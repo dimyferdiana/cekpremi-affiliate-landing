@@ -137,9 +137,9 @@ selectReward("points");
 // Game artwork and animation come from the observed Cekpremi public catalog.
 // This showcase never runs a game or consumes vouchers. Demo actions lead to its public catalog.
 const games = {
-  garden: {name:"Garden of Olympus",description:"Jelajahi permainan bertema taman dan simbol buah. Kenali mekanik, penggunaan voucher, serta ketentuan reward pada demo resmi.",cover:"assets/games/garden-cover.webp",preview:"assets/games/garden-preview.webp"},
-  mahjong: {name:"Mahjong Festival",description:"Kenali permainan dengan visual ubin mahjong. Pelajari mekanik, penggunaan voucher, serta ketentuan reward melalui demo resmi.",cover:"assets/games/mahjong-cover.webp",preview:"assets/games/mahjong-preview.webp"},
-  immortal: {name:"Immortal Auto 777",description:"Jelajahi permainan bertema otomotif dengan visual mobil dan spare part. Baca mekanik, penggunaan voucher, serta ketentuan reward sebelum mencoba.",cover:"assets/games/immortal-cover.webp",preview:"assets/games/immortal-preview.webp"}
+  garden: {name:"Garden of Olympus",description:"Main game bertema taman untuk mendapatkan reward uang sesuai ketentuan program. Periksa mekanik permainan, status saldo, dan syarat penarikan sebelum mulai.",cover:"assets/games/garden-cover.webp",preview:"assets/games/garden-preview.webp"},
+  mahjong: {name:"Mahjong Festival",description:"Main game bertema ubin mahjong untuk mendapatkan reward uang sesuai ketentuan program. Periksa mekanik permainan, status saldo, dan syarat penarikan sebelum mulai.",cover:"assets/games/mahjong-cover.webp",preview:"assets/games/mahjong-preview.webp"},
+  immortal: {name:"Immortal Auto 777",description:"Main game bertema otomotif untuk mendapatkan reward uang sesuai ketentuan program. Periksa mekanik permainan, status saldo, dan syarat penarikan sebelum mulai.",cover:"assets/games/immortal-cover.webp",preview:"assets/games/immortal-preview.webp"}
 };
 let selectedGame = "garden";
 let previewPlaying = false;

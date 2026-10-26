@@ -47,6 +47,11 @@
 .how-section .split-heading,.offers-heading{display:block}
 .how-section .split-heading>p,.offers-heading>p{max-width:670px;margin-top:16px;padding-bottom:0}
 
+/* Keep the game value proposition in one reading flow: label, title, then supporting copy. */
+.games-section .split-heading{display:block}
+.games-section .split-heading>p{max-width:560px;margin-top:16px;padding-bottom:0}
+.games-section #games-title{white-space:nowrap}
+
 /* A complete summary with a readable sequence and its conditions attached. */
 .benefit-summary{margin-top:30px;overflow:hidden;border:1px solid #e2e5dc;border-radius:18px;background:#f2f4ee}
 .benefit-summary .benefit-cycle{margin:0;padding:27px 28px 20px;border:0;gap:17px;align-items:center}
@@ -106,6 +111,8 @@
  .activity-update p{gap:7px;font-size:11px}.activity-update time{font-size:10px}
  .activity-update-note{display:none}
  .how-section .split-heading>p,.offers-heading>p{margin-top:14px}
+ .games-section .split-heading>p{margin-top:14px}
+ .games-section #games-title{font-size:24px;letter-spacing:-.04em}
  .activity-scene{aspect-ratio:16/9;padding:12px 22px;max-height:240px}
  .activity-scene .activity-illustration{max-height:none}
  .benefit-summary{margin-top:18px;border-radius:16px}
