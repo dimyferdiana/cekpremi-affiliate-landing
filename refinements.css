@@ -113,6 +113,11 @@
  .how-section .split-heading>p,.offers-heading>p{margin-top:14px}
  .games-section .split-heading>p{margin-top:14px}
  .games-section #games-title{font-size:24px;letter-spacing:-.04em}
+ .games-section .demo-disclosure{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;align-items:start}
+ .games-section .demo-disclosure>p{grid-column:2;grid-row:1;max-width:none;flex:none}
+ .games-section .demo-disclosure .text-link{grid-column:2;grid-row:2;justify-self:start;margin:4px 0 0;padding:0;white-space:normal}
+ .games-section .library-heading{display:block}
+ .games-section .library-heading>span{display:block;max-width:none;margin-top:6px;text-align:left}
  .activity-scene{aspect-ratio:16/9;padding:12px 22px;max-height:240px}
  .activity-scene .activity-illustration{max-height:none}
  .benefit-summary{margin-top:18px;border-radius:16px}
