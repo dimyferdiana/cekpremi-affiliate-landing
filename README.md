@@ -112,3 +112,13 @@ Sumber aset tambahan yang diamati pada halaman asli:
 Pemeriksaan versi ini: viewport 320, 390, 768, 1024, 1280, dan 1440 piksel tanpa overflow horizontal; aset dimuat; pergantian tab game melalui klik dan keyboard, start/stop preview, detail demo, kedua panel bonus, Escape, menu mobile, dan CTA menetap bekerja. Console tidak melaporkan error dalam rangkaian tersebut. Belum ada uji pemahaman pengguna atau bukti dampak pada rasio register.
 
 Backup versi sebelumnya: `../outputs/cekpremi-before-visual-polish.zip`.
+
+## Micro-interactions dan ilustrasi — 26 Oktober 2026
+
+- `refinements.css` menambahkan gerakan melayang pelan pada dua kartu game dan voucher hero. Gerakan berhenti ketika hero keluar viewport atau tab browser tersembunyi, serta mati pada preferensi reduced motion.
+- Tombol dan kartu memiliki respons hover/tekan yang ringan. Pergantian game, pembukaan dialog, dan jawaban FAQ memakai transisi pendek.
+- Tautan ekstra di bawah artwork hero dihapus. CTA jelajah game di samping tombol utama tetap tersedia.
+- Enam ilustrasi baru melengkapi tiga langkah aktivitas, dua penawaran bonus, dan CTA akhir. Sumber PNG transparan, versi WebP, serta prompt disimpan di `assets/illustrations/`. Gambar ini bersifat ilustratif, bukan screenshot UI atau game sebenarnya.
+- Ringkasan alur aktivitas memiliki urutan yang lebih mudah dipindai dan catatan ketentuan yang menyatu. Tombol penawaran memenuhi seluruh lebar isi kartu. Footer memakai aset logo yang sama dengan header.
+- Pemeriksaan render terisolasi menggunakan Chrome headless, aset proyek lokal, dan koneksi eksternal yang diblokir. Pada lebar 320, 390, 768, 1024, serta 1440 px tidak ada overflow halaman atau gambar rusak. Teks/font dan ikon eksternal dapat berbeda dari browser dengan koneksi penuh. Tab game, kedua dialog bonus, CTA daftar, dan reduced motion diperiksa. Hasil serta screenshot tersimpan di `../outputs/landing-refinements-review/`.
+- Belum ada deployment atau pembaruan desain Figma dalam perubahan HTML ini.

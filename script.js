@@ -25,6 +25,27 @@ window.matchMedia("(min-width: 1001px)").addEventListener("change", event => {
   if (event.matches) closeMenu();
 });
 
+// Prototype activity ticker. In production, these messages must be supplied only
+// from completed, privacy-safe reward or redemption events on the server.
+const activityMessages = [
+  {message: "R*** menukar voucher game", time: "2 menit lalu", dateTime: "PT2M"},
+  {message: "A*** menerima Reward Points", time: "5 menit lalu", dateTime: "PT5M"},
+  {message: "D*** mengajukan redeem penghasilan", time: "9 menit lalu", dateTime: "PT9M"}
+];
+const activityMessage = document.querySelector("[data-activity-message]");
+const activityTime = document.querySelector("[data-activity-time]");
+let activityIndex = 0;
+function updateActivityMessage() {
+  const activity = activityMessages[activityIndex];
+  activityMessage.textContent = activity.message;
+  activityTime.textContent = activity.time;
+  activityTime.dateTime = activity.dateTime;
+  activityIndex = (activityIndex + 1) % activityMessages.length;
+}
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.setInterval(updateActivityMessage, 6500);
+}
+
 const rewardContent = {
   points: {
     title: "Reward Points",
@@ -147,6 +168,15 @@ function selectGame(key) {
     tab.setAttribute("aria-selected", String(selected));
     tab.tabIndex = selected ? 0 : -1;
   });
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    [document.querySelector(".featured-copy"), gameImage].forEach(element => {
+      element.getAnimations().forEach(animation => animation.cancel());
+      element.animate([
+        {opacity: .4, transform: "translateY(7px)"},
+        {opacity: 1, transform: "translateY(0)"}
+      ], {duration: 380, easing: "cubic-bezier(.22,1,.36,1)"});
+    });
+  }
 }
 gameTabs.forEach((tab,index) => {
   tab.addEventListener("click", () => selectGame(tab.dataset.game));
@@ -180,3 +210,16 @@ function showGameDetails() {
   openDialog(gameDetailDialog);
 }
 document.querySelectorAll("[data-demo],[data-game-details]").forEach(button => button.addEventListener("click",showGameDetails));
+
+// Pause ambient animation outside the viewport and in hidden browser tabs.
+const heroArtwork = document.querySelector(".campaign-art");
+let heroInView = true;
+function updateHeroMotion() {
+  heroArtwork.classList.toggle("motion-paused", document.hidden || !heroInView);
+}
+const heroMotionObserver = new IntersectionObserver(entries => {
+  heroInView = entries[0].isIntersecting;
+  updateHeroMotion();
+}, {threshold: 0});
+heroMotionObserver.observe(heroArtwork);
+document.addEventListener("visibilitychange", updateHeroMotion);

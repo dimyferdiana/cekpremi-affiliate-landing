@@ -1,0 +1,141 @@
+/* Campaign refinements: motion, generated illustrations, and clearer benefit layouts. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1);--motion-quick:220ms;--motion-soft:480ms}
+.hero-game-garden{--float-turn:-10deg;animation:hero-float 6.4s ease-in-out infinite}
+.hero-game-auto{--float-turn:9deg;animation:hero-float 7.5s ease-in-out -2.8s infinite}
+.hero-voucher{--float-turn:-3deg;animation:hero-float-small 7s ease-in-out -1.5s infinite}
+@keyframes hero-float{0%,100%{transform:translateY(0) rotate(var(--float-turn))}50%{transform:translateY(-13px) rotate(calc(var(--float-turn) + 1.5deg))}}
+@keyframes hero-float-small{0%,100%{transform:translateY(0) rotate(var(--float-turn))}50%{transform:translateY(-7px) rotate(calc(var(--float-turn) + .6deg))}}
+.hero-game,.hero-voucher{will-change:transform}
+.hero-game:hover,.hero-voucher:hover{animation-play-state:paused}
+.motion-paused .hero-game,.motion-paused .hero-voucher{animation-play-state:paused}
+.activity-update{background:#fff8ef;border-bottom:1px solid #f0dfca;color:#583c26}
+.activity-update-inner{min-height:43px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px;font-size:12px}
+.activity-update-label{display:inline-flex;align-items:center;gap:8px;font-weight:750;color:#172b3a;white-space:nowrap}
+.activity-update-dot{width:8px;height:8px;border-radius:50%;background:#d85812;box-shadow:0 0 0 4px #f8d8bd;animation:activity-pulse 2.3s ease-in-out infinite}
+.activity-update p{display:flex;align-items:center;gap:10px;min-width:0;color:#654a36;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.activity-update time{color:#806e5d;font-size:11px;white-space:nowrap}
+.activity-update-note{display:inline-flex;align-items:center;gap:6px;color:#74614e;font-size:11px;white-space:nowrap}
+.activity-update-note .icon{color:#c25b1a}
+@keyframes activity-pulse{50%{box-shadow:0 0 0 7px #f8d8bd66}}
+.button,.card-link,.text-link,.game-choice,.preview-toggle,.reward-tabs button,.modal-close,.menu-toggle{transition:background-color var(--motion-quick) ease,color var(--motion-quick) ease,box-shadow var(--motion-soft) var(--motion-ease),transform var(--motion-soft) var(--motion-ease),border-color var(--motion-quick) ease}
+.button>.icon,.card-link>.icon,.text-link>.icon{transition:transform var(--motion-soft) var(--motion-ease)}
+.button:active{transform:translateY(0) scale(.98)}
+.card-link:active,.text-link:active{transform:translateY(1px)}
+.game-choice:active{transform:scale(.985)}
+.reward-tabs button[aria-selected=true]{box-shadow:0 2px 8px #172b3a12}
+.modal[open]{animation:dialog-enter .32s var(--motion-ease) both}
+.modal[open]::backdrop{animation:backdrop-enter .25s ease both}
+@keyframes dialog-enter{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes backdrop-enter{from{opacity:0}to{opacity:1}}
+.game-content-enter{animation:content-enter .38s var(--motion-ease) both}
+@keyframes content-enter{from{opacity:.35;transform:translateY(7px)}to{opacity:1;transform:none}}
+.faq-list details[open] .faq-answer{animation:content-enter .28s var(--motion-ease) both}
+.faq-plus{transition:transform .3s var(--motion-ease)}
+
+/* The artwork keeps one ratio and optical scale across all three steps. */
+.activity-scene{width:100%;min-width:0;flex:none;height:auto;aspect-ratio:16/10;padding:12px;background:#f6f0e7;border:1px solid #eae2d6;border-radius:16px}
+.scene-share{background:#edf1eb}.scene-voucher{background:#fff0db}.scene-games{background:#edf0f3}
+.activity-scene .activity-illustration{display:block;position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);max-height:none;object-fit:contain;border:0;border-radius:0;box-shadow:none;transform:none;transition:transform .7s var(--motion-ease)}
+.activity-card .card-link{margin-top:auto}
+.activity-card{display:flex;flex-direction:column}
+.activity-card>p{margin-bottom:20px}
+.activity-top{margin-bottom:18px}
+/* The cards are related by order, not by a prescribed path. Remove directional connectors. */
+.activity-card+.activity-card::before{content:none;display:none}
+
+/* Keep supporting copy with its heading instead of splitting the reading flow. */
+.how-section .split-heading,.offers-heading{display:block}
+.how-section .split-heading>p,.offers-heading>p{max-width:670px;margin-top:16px;padding-bottom:0}
+
+/* A complete summary with a readable sequence and its conditions attached. */
+.benefit-summary{margin-top:30px;overflow:hidden;border:1px solid #e2e5dc;border-radius:18px;background:#f2f4ee}
+.benefit-summary .benefit-cycle{margin:0;padding:27px 28px 20px;border:0;gap:17px;align-items:center}
+.benefit-summary .cycle-symbol{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#fff5e8;font-size:26px;color:#b64a10}
+.benefit-summary .benefit-cycle strong{font-size:17px;color:#172b3a}
+.benefit-summary .benefit-cycle p{font-size:14px;line-height:1.7;color:#536156;max-width:620px}
+.benefit-summary .benefit-cycle .text-link{margin-left:auto;font-size:14px;flex-shrink:0;min-height:44px}
+.benefit-path{list-style:none;margin:0;padding:7px 28px 28px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:benefit-step}
+.benefit-path li{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:600;line-height:1.5;min-width:0}
+.benefit-path li::before{counter-increment:benefit-step;content:counter(benefit-step,decimal-leading-zero);display:grid;place-items:center;width:31px;height:31px;border-radius:50%;flex-shrink:0;background:#fffdf9;border:1px solid #d8dfd0;color:#49634e;font-size:10px;font-weight:700}
+.benefit-summary .how-footnote{margin:0;padding:18px 28px;border-top:1px solid #dfe4d8;background:#e9eee3;gap:10px;color:#4d594c;font-size:12px}
+.benefit-summary .how-footnote>.icon{flex-shrink:0;margin-top:3px}
+
+/* Offer illustrations sit in their own column; footers span the entire card. */
+.offers-grid{align-items:stretch;gap:24px}
+.offer-card{display:grid;grid-template-columns:minmax(0,1fr) 150px;grid-template-rows:auto auto 1fr auto;column-gap:18px;align-items:start;padding:30px;min-height:344px;border:1px solid #f0dcc2;border-radius:18px}
+.offer-card:nth-child(2){border-color:#d6e1e5}
+.offer-card>.offer-label{grid-column:1/-1;grid-row:1;min-width:0;line-height:1.6}
+.offer-card>h4{grid-column:1;grid-row:2;margin-top:24px;font-size:27px;max-width:none;line-height:1.25;position:relative;z-index:1}
+.offer-card>p{grid-column:1;grid-row:3;max-width:none;font-size:14px;margin-top:16px;margin-bottom:26px;position:relative;z-index:1}
+.offer-illustration{grid-column:2;grid-row:2/4;align-self:center;width:100%;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 9px 12px #663b1010);transition:transform .65s var(--motion-ease)}
+.offer-card>.card-link{grid-column:1/-1;grid-row:4;max-width:none;width:100%;margin:0;min-height:52px;padding:17px 0 0;font-size:14px;border-color:#d6bfa0;align-self:end}
+.offer-card:nth-child(2)>.card-link{border-color:#b9cbd4}
+
+/* Closing action: illustration provides a focal point without competing with copy. */
+.closing-banner{display:grid;grid-template-columns:minmax(0,1fr) 290px;column-gap:36px;row-gap:24px;padding:46px 48px;background:#ffac60;border:1px solid #f09948;border-radius:22px;isolation:isolate;align-items:center;overflow:hidden}
+.closing-banner::before,.closing-banner::after{content:"";display:block;position:absolute;pointer-events:none;z-index:-1}
+.closing-banner::before{width:440px;height:440px;right:-184px;top:-215px;border:1px solid #fff1df96;border-radius:50%;box-shadow:0 0 0 50px #fff1df14,0 0 0 104px #fff1df0d}
+.closing-banner::after{width:270px;height:270px;left:52%;bottom:-236px;border:1px solid #bc5b1f42;border-radius:50%}
+.closing-copy{grid-column:1;grid-row:1;position:relative;z-index:1}
+.closing-banner h2{font-size:clamp(29px,3vw,38px);max-width:650px;line-height:1.22;margin-top:15px}
+.closing-banner p{max-width:560px;font-size:15px;line-height:1.8;margin-top:17px}
+.closing-illustration{grid-column:2;grid-row:1/3;width:100%;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 18px 18px #93461615);transition:transform .8s var(--motion-ease);position:relative;z-index:1}
+.closing-actions{grid-column:1;grid-row:2;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:20px;margin:0;position:relative;z-index:1}
+.closing-actions .button{min-height:54px;padding-inline:24px;background:#172b3a;box-shadow:0 5px 0 #172b3a16}
+.closing-actions>a{font-size:13px;min-height:44px;display:inline-flex;align-items:center;gap:8px;color:#543216}
+.site-footer .brand-logo{width:195px;height:auto;max-width:100%}
+.footer-top>.brand{align-self:start}
+
+@media(hover:hover) and (pointer:fine){
+ .button:hover>.icon,.card-link:hover>.icon,.text-link:hover>.icon{transform:translateX(4px)}
+ .activity-card:hover .activity-illustration{transform:translateY(-5px) scale(1.025)}
+ .offer-card:hover .offer-illustration{transform:translateY(-5px) rotate(2deg)}
+ .closing-banner:hover .closing-illustration{transform:translateY(-5px)}
+ .game-choice:hover{transform:translateY(-2px)}
+}
+@media(max-width:1000px){
+ .offer-card{grid-template-columns:minmax(0,1fr) 110px;padding:25px;column-gap:12px}
+ .offer-card>h4{font-size:24px}
+ .closing-banner{grid-template-columns:minmax(0,1fr) 235px;padding:35px;gap:25px}
+ .benefit-summary .benefit-cycle{flex-wrap:wrap}.benefit-summary .benefit-cycle>div{flex:1;min-width:220px}
+ .benefit-summary .benefit-cycle .text-link{margin-left:63px}
+ .benefit-path{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px}
+}
+@media(max-width:760px){
+ .activity-update-inner{min-height:44px;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:11px}
+ .activity-update p{gap:7px;font-size:11px}.activity-update time{font-size:10px}
+ .activity-update-note{display:none}
+ .how-section .split-heading>p,.offers-heading>p{margin-top:14px}
+ .activity-scene{aspect-ratio:16/9;padding:12px 22px;max-height:240px}
+ .activity-scene .activity-illustration{max-height:none}
+ .benefit-summary{margin-top:18px;border-radius:16px}
+ .benefit-summary .benefit-cycle{display:grid;grid-template-columns:40px minmax(0,1fr);padding:20px;gap:10px 14px;align-items:start}
+ .benefit-summary .cycle-symbol{grid-column:1;grid-row:1;width:40px;height:40px;font-size:23px}
+ .benefit-summary .benefit-cycle>div{grid-column:2;grid-row:1;min-width:0;flex-basis:auto}
+ .benefit-summary .benefit-cycle strong{font-size:16px;line-height:1.5}
+ .benefit-summary .benefit-cycle p{font-size:13px;line-height:1.7;margin-top:8px}
+ .benefit-summary .benefit-cycle .text-link{grid-column:1/-1;width:100%;min-height:44px;margin:4px 0 0;padding-top:13px;border-top:1px solid #d8dfd0;display:flex;align-items:center;justify-content:space-between}
+ .benefit-path{padding:5px 20px 24px;grid-template-columns:1fr;gap:15px}
+ .benefit-path li{font-size:13px}.benefit-path li::before{width:29px;height:29px}
+ .benefit-summary .how-footnote{padding:17px 20px;font-size:12px;line-height:1.75}
+ .offer-card{grid-template-columns:minmax(0,1fr) 110px;min-height:330px;padding:25px 22px;column-gap:12px}
+ .offer-card>.offer-label{font-size:10px}.offer-card>h4{font-size:25px;grid-column:1/-1;max-width:calc(100% - 100px);margin-top:22px}
+ .offer-illustration{grid-row:2;align-self:center;position:relative;right:-7px;width:110px}
+ .offer-card>p{grid-column:1/-1;font-size:15px;margin-top:18px;margin-bottom:22px}
+ .offer-card>.card-link{font-size:14px}
+ .closing-banner{padding:29px 25px;grid-template-columns:1fr;gap:14px;border-radius:18px}
+ .closing-copy{grid-column:1;grid-row:1}.closing-banner h2{font-size:29px;max-width:100%}
+ .closing-banner p{max-width:none;font-size:15px}
+ .closing-illustration{grid-column:1;grid-row:2;width:220px;max-width:80%;justify-self:center;aspect-ratio:4/3;margin-top:0}
+ .closing-actions{grid-column:1;grid-row:3;display:flex;flex-direction:column;align-items:stretch;gap:13px;margin:0}
+ .closing-actions .button{width:100%;justify-content:space-between;font-size:14px}.closing-actions>a{justify-content:center}
+ .site-footer .brand-logo{width:190px}
+}
+@media(max-width:370px){.activity-update time{display:none}.offer-card{padding:23px 20px}.offer-card>h4{font-size:23px;max-width:calc(100% - 87px)}.offer-illustration{width:96px;justify-self:end}.closing-banner h2{font-size:26px}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .button:hover,.button:active,.game-choice:hover,.game-choice:active,.card-link:active,.text-link:active{transform:none}
+ .activity-card:hover .activity-illustration,.offer-card:hover .offer-illustration,.closing-banner:hover .closing-illustration,.button:hover>.icon,.card-link:hover>.icon,.text-link:hover>.icon{transform:none}
+}
+@media print{.hero-game,.hero-voucher{animation:none!important}.closing-banner,.benefit-summary{break-inside:avoid}.closing-illustration{width:200px}}
